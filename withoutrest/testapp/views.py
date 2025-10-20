@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import View
+<<<<<<< HEAD
 from testapp.models import Employee, College
+=======
+from testapp.models import Employee,College
+>>>>>>> master
 import json
 from django.http import HttpResponse
 
