@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import View
-from testapp.models import Employee
+from testapp.models import Employee,College
 import json
 from django.http import HttpResponse
 
@@ -16,3 +16,15 @@ class EmployeeDetailsCBV(View):
           }
           json_data=json.dumps(emp_data)
           return HttpResponse(json_data,content_type='application/json')
+
+class CollegeDetailsCBV(View):
+    def get(self, request, id, *args, **kwargs):
+        college = College.objects.get(id=id)
+        college_data = {
+            'cname': college.cname,
+            'ccourse': college.ccourse,
+            'csubjects': college.csubjects,
+            'clocation': college.clocation,
+        }
+        json_data = json.dumps(college_data)
+        return HttpResponse(json_data, content_type='application/json')

@@ -20,5 +20,7 @@ from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('empdetails/<int:id>/',views.EmployeeDetailsCBV.as_view())
+    path('empdetails/<int:id>/',views.EmployeeDetailsCBV.as_view()),
+    path('collegedetails/<int:id>/',views.CollegeDetailsCBV.as_view()),
+
 ]
