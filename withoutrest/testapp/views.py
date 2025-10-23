@@ -4,6 +4,7 @@ from testapp.models import Employee, College
 import json
 from django.http import HttpResponse
 
+
 # Create your views here.
 class EmployeeDetailsCBV(View):
      def get(self,request,id,*args,**kwargs):
