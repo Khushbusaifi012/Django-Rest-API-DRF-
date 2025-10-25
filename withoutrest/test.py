@@ -7,4 +7,3 @@ def get_resource(id):
     print(resp.json())
 id=input("Enter Employee id:")
 get_resource(id)
-
